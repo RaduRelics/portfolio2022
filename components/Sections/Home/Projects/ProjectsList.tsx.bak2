@@ -1,0 +1,81 @@
+import {
+    Flex,
+    Container,
+    Heading,
+    Stack,
+    Text,
+    Button,
+    Icon,
+    IconProps,
+    Box,
+    Image,
+    useColorModeValue,
+    scaleFadeConfig
+} from '@chakra-ui/react';
+
+import projects from "./projects.json";
+
+import NextLink from 'next/link'
+
+const PortfolioItems = () => {
+    return (
+        <>
+            {projects?.map(
+                (
+                    {
+                        project_number,
+                        project_tags,
+                        project_image,
+                        project_name,
+                        project_description,
+                        project_url,
+                        project_git,
+                    },
+                    index
+                ) => (
+                    <Container maxW={'5xl'} key={index}>
+                        <Stack
+                            textAlign={'center'}
+                            align={'center'}
+                            spacing={{ base: 8, md: 10 }}
+                            py={{ base: 20, md: 28 }}>
+                            <Stack w={'full'}>
+                                <Stack alignSelf={"flex-end"}>
+                                    <Text align="right" as={'span'} color={'red.400'}>
+                                        {project_tags}
+                                    </Text>
+                                </Stack>
+                                <Stack direction={"row"} spacing="24px" justifyContent={"space-between"}>
+                                    <Box>
+
+                                        <Heading fontWeight={600}
+                                            fontSize={{ base: '3xl', sm: '4xl', md: '6xl' }}
+                                            lineHeight={'110%'}>
+                                            0{project_number}
+                                        </Heading>
+                                    </Box>
+                                    <Box>
+                                        <Heading
+                                            fontWeight={600}
+                                            fontSize={{ base: '3xl', sm: '4xl', md: '6xl' }}
+                                            lineHeight={'110%'}>
+                                            {project_name}
+                                        </Heading>
+                                    </Box>
+                                </Stack>
+                            </Stack>
+                            <Flex w={'full'}>
+                                <Box style={{ transition: 'transform 200ms ease 0s' }} _hover={{ transform: 'scaleX(0.95) scaleY(0.95)', zIndex: 2, cursor: 'pointer' }}>
+                                    <NextLink href={project_url} as={'a'}>
+                                        <Image src={project_image} />
+                                    </NextLink>
+                                </Box>
+                            </Flex>
+                        </Stack>
+                    </Container>
+                )
+            )} 
+         </>   
+    );
+}
+export default PortfolioItems;

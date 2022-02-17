@@ -1,0 +1,53 @@
+import React, { useState } from 'react'
+import Head from 'next/head'
+import {
+    useColorMode,
+    Heading,
+    Text,
+    Flex,
+    Stack,
+    Wrap,
+    Input,
+    InputGroup,
+    InputRightElement,
+    Divider,
+    Button,
+    useColorModeValue,
+    SimpleGrid
+} from '@chakra-ui/react'
+
+import Container from '../components/UI/GlobalDarkMode/ColorChange'
+
+import Navbar from '../components/UI/Navbar/Navbar'
+
+import PortfolioH from '../components/Sections/Portfolio/PortfolioHeader'
+
+import Projects from '../components/Sections/Portfolio/ProjectsList'
+
+import Footer from '../components/UI/Footer/Footer'
+
+import NextLink from 'next/link'
+
+export default function Portfolio() {
+
+    return (
+        <>
+            <Head>
+                <title>Portfolio - Michael Radu</title>
+            </Head>
+            <Navbar />
+            <Container>
+                <PortfolioH />
+                <SimpleGrid columns={[1, null, 3]} spacing="40px">
+                <Projects />
+                </SimpleGrid>
+                {/* <Stack direction="row" spacing={4} justify="center">
+                    <Heading> TO DO: ADD GITHUB REPOS AND SEPARATE PROJECT FILE </Heading>
+                </Stack> */}
+               
+
+            </Container>
+            <Footer />
+        </>
+    )
+}

@@ -1,0 +1,44 @@
+import React, { useState } from 'react'
+import Head from 'next/head'
+import {
+    useColorMode,
+    Heading,
+    Text,
+    Flex,
+    Stack,
+    Wrap,
+    Input,
+    InputGroup,
+    InputRightElement,
+    Divider,
+    Button,
+    useColorModeValue
+} from '@chakra-ui/react'
+
+import Container from '../components/UI/GlobalDarkMode/ColorChange'
+
+import Navbar from '../components/UI/Navbar/Navbar'
+
+
+import Footer from '../components/UI/Footer/Footer'
+
+import NextLink from 'next/link'
+
+export default function Portfolio() {
+
+    return (
+        <>
+            <Head>
+                <title>About - Michael Radu</title>
+            </Head>
+            <Navbar />
+            <Container>
+                <Wrap direction={["column", "row"]} justifyContent="center">
+                </Wrap>
+               
+
+            </Container>
+            <Footer />
+        </>
+    )
+}

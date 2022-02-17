@@ -1,0 +1,56 @@
+[
+  {
+    "project_number": 1,
+    "project_tags": "PRODUCT DESIGN, PROTOTYPING, DEVELOPMENT",
+    "project_name": "DollaBank",
+    "project_description": "This project consists of a simple wallpaper app. Consume an API and return the data. You can choose a certain category of wallpapers, search for one containing a certain word, save and apply them, etc. Developed with Flutter.",
+    "project_url": "#",
+    "project_git": "#",
+    "project_image": "/img/dolla.png"
+  },
+  {
+    "project_number": 2,
+    "project_tags": "PRODUCT DESIGN, PROTOTYPING, DEVELOPMENT",
+    "project_name": "FireChat",
+    "project_description": "This is a collection of projects that aim to automate boring tasks with code. Open many apps at once or on startup, automatically open YouTube to the newest video that one youtuber you always watch posted, crawl/scrape the web, etc. Developed with Python/Javascript.",
+    "project_url": "#",
+    "project_git": "#",
+    "project_image": "/img/firechat.png"
+  },
+  {
+    "project_number": 3,
+    "project_tags": "PRODUCT DESIGN, PROTOTYPING, DEVELOPMENT",
+    "project_name": "JocSecund Brand",
+    "project_description": "This project consists of a personal blog, where in the future I will make posts giving tips and passing on knowledge that I acquired and that I will acquire throughout my career. In this project I learned how to use new libraries and I was able to try Next.js. It was one of my first projects with Next.js. Developed with Next.js, MDX and TypeScript.",
+    "project_url": "#",
+    "project_git": "#",
+    "project_image": "/img/jocsecund.png"
+  },
+  {
+    "project_number": 4,
+    "project_tags": "PRODUCT DESIGN, PROTOTYPING, DEVELOPMENT",
+    "project_name": "COVID-19 Track",
+    "project_description": "This is a collection of projects that are mostly games made to pass the time or entertain people. Most of them are pretty short, but there are some better arcade/indie games I made in there too. I was able to learn a lot from these projects. I learned how games work, how to create pixel art, levels, music, etc. Developed with Unity/Python/C++.",
+    "project_url": "#",
+    "project_git": "#",
+    "project_image": "/img/covid19-corona.png"
+  },
+  {
+    "project_number": 5,
+    "project_tags": "PRODUCT DESIGN, PROTOTYPING, DEVELOPMENT",
+    "project_name": "YouTube Data Manipulation",
+    "project_description": "This is a yet another collection of projects that are aimed specifically at manipulating data from your YouTube videos. Have you ever seen the This video has X views videos or ever wanted to change the title/description/tags of a bunch of videos at once? These projects are made just for that. Developed with React.js/Javascript.",
+    "project_url": "#",
+    "project_git": "#",
+    "project_image": "/img/project-image.png"
+  },
+  {
+    "project_number": 6,
+    "project_tags": "PRODUCT DESIGN, PROTOTYPING, DEVELOPMENT",
+    "project_name": "Pinnet",
+    "project_description": "This is a yet another collection of projects that are aimed specifically at manipulating data from your YouTube videos. Have you ever seen the This video has X views videos or ever wanted to change the title/description/tags of a bunch of videos at once? These projects are made just for that. Developed with React.js/Javascript.",
+    "project_url": "#",
+    "project_git": "#",
+    "project_image": "/img/project-image.png"
+  }
+]

@@ -1,0 +1,102 @@
+import {
+    Flex,
+    Container,
+    Heading,
+    Stack,
+    Text,
+    Button,
+    Icon,
+    IconProps,
+    Box,
+    Image,
+    useColorModeValue,
+    scaleFadeConfig,
+    GridItem,
+} from '@chakra-ui/react';
+
+import projects from "./projects.json";
+
+import NextLink from 'next/link'
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
+
+const PortfolioItems = () => {
+    return (
+        <>
+            <ResponsiveMasonry
+                columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
+            >
+                <Masonry>
+                    {projects?.map(
+                        (
+                            {
+                                row_span,
+                                col_span,
+                                project_number,
+                                project_tags,
+                                project_image,
+                                project_name,
+                                project_description,
+                                project_url,
+                                project_git,
+                            },
+                            index
+                        ) => (
+                            // <Container maxW={'6xl'} key={index}>py={{ base: 20, md: 28 }}
+                            // <GridItem rowSpan={row_span} colSpan={col_span} bg="tomato" >
+                            <Stack
+                                key={index}
+                                textAlign={'left'}
+                                align={'left'}
+                                spacing={{ base: 8, md: 10 }}
+                            >
+                                {/* <Stack w={'full'}>
+                                <Stack alignSelf={"flex-end"}>
+                                    <Text align="right" as={'span'} color={'red.400'}>
+                                        {project_tags}
+                                    </Text>
+                                </Stack>
+                                <Stack direction={"row"} spacing="24px" justifyContent={"space-between"}>
+                                    <Box>
+
+                                        <Heading fontWeight={600}
+                                            fontSize={{ base: '3xl', sm: '4xl', md: '6xl' }}
+                                            lineHeight={'110%'}>
+                                            0{project_number}
+                                        </Heading>
+                                    </Box>
+                                    <Box>
+                                        <Heading
+                                            fontWeight={600}
+                                            fontSize={{ base: '3xl', sm: '4xl', md: '6xl' }}
+                                            lineHeight={'110%'}>
+                                            {project_name}
+                                        </Heading>
+                                    </Box>
+                                </Stack>
+                            </Stack> */}
+
+                                <Box
+                                    style={{ transition: 'transform 200ms ease 0s' }}
+                                    _hover={{
+                                        transform: 'scaleX(0.95) scaleY(0.95)',
+                                        zIndex: 2,
+                                        ursor: 'pointer'
+
+                                    }}
+
+                                >
+                                    <NextLink href={project_url} as={'a'}>
+                                        <Image src={project_image} />
+                                    </NextLink>
+                                </Box>
+                            </Stack>
+                            // </GridItem>
+                            // </Container>
+                        )
+                    )}
+                </Masonry>
+            </ResponsiveMasonry>
+        </>
+    );
+}
+export default PortfolioItems;
