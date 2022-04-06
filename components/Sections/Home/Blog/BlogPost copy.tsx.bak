@@ -1,0 +1,84 @@
+import React, { useState } from 'react'
+import {
+  Box,
+  Heading,
+  Link,
+  Image,
+  Text,
+  Divider,
+  HStack,
+  Tag,
+  Wrap,
+  WrapItem,
+  SpaceProps,
+  useColorModeValue,
+  Container,
+  VStack,
+} from '@chakra-ui/react';
+
+import NextLink from 'next/link'
+
+import { parseISO, format } from 'date-fns'
+
+import postData from "./postData.json";
+
+const ArticleList = ({ title, publishedAt, summary, image, slug}) => {
+  return (
+    <>
+    {postData?.map(
+      (
+          {
+              post_title,
+              post_image,
+              
+          },
+          index
+      ) => (
+    <Wrap key={index} direction={["column", "row"]} spacing="30px" mb="15px">
+      <WrapItem>
+        <Box w="100%">
+          <NextLink href={`/blog/${slug}`} passHref>
+            <Image
+              transform="scale(1.0)"
+              src={title == post_title ? post_image : 'https://uploads-ssl.webflow.com/5fe8dbb5489ca9128e4ee904/6000f53d26b4fe0bae744e29_how-to-design-for-accessibility_teaser%402x-p-500.png'}
+              alt="Post Image"
+              objectFit="contain"
+              width="100%"
+              transition="0.3s ease-in-out"
+              borderRadius='.5rem'
+              _hover={{ transform: 'scaleX(0.95) scaleY(0.95)', zIndex: 2}}
+            />
+          </NextLink>
+          {/* <Text
+            color="gray.500"
+            minWidth="140px"
+            textAlign={'center'}
+            mb={['15px', '30px']}
+            mt=''
+            fontFamily="Poppins"
+            letterSpacing="4px"
+          >
+            {format(parseISO(publishedAt), 'MMMM dd, yyyy')}
+          </Text> */}
+          <Heading
+            fontSize="1.2vw"
+            marginTop="2em"
+            fontFamily={"IBM Plex Mono"}
+            textAlign={'left'}
+            fontWeight="400"
+            >
+            <NextLink href={`/blog/${slug}`} passHref>
+              {title}
+            </NextLink>
+
+          </Heading>
+        </Box>
+      </WrapItem>
+    </Wrap>
+      )
+    )}
+    </>
+  );
+};
+
+export default ArticleList;

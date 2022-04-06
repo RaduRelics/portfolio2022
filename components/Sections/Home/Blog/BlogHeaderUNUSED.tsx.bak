@@ -1,0 +1,47 @@
+import {
+    Box,
+    Flex,
+    Container,
+    Heading,
+    Stack,
+    Text,
+    Button,
+    Icon,
+    IconProps,
+    useColorModeValue,
+    createIcon,
+  } from '@chakra-ui/react';
+  import { ArrowForwardIcon } from '@chakra-ui/icons';
+  import TextLoop from "react-text-loop";
+  import NextLink from 'next/link'
+  
+  export default function CallToActionWithIllustration() {
+    return (
+      <Container maxW={'6xl'} backgroundImage="url(https://azumbrunnen.me/grid.82a8820e.png)" backgroundSize='contain'
+        backgroundRepeat='repeat-y'>
+        <Stack
+          textAlign={'left'}
+          align={'left'}
+          spacing={{ base: 8, md: 10 }}
+          py={{ base: '3rem', md: '3.5em' }}
+          mt="2em"
+          >
+
+            <Heading
+              fontFamily={'IBM PLEX MONO'}
+              fontWeight={400}
+              fontSize={{ base: '3rem', sm: '3.5rem', md: '92px' }}
+              lineHeight={'1.15em'}>
+              Write
+            </Heading>
+          <Text
+            fontSize={{ base: '1.1rem', sm: '2em', md: '1.1rem', lg: '1.2vw' }}
+            fontFamily={'IBM PLEX MONO'}
+            fontWeight={400}
+            maxW={'3xl'}>
+            Writing is an essential part of my process. My essays were featured on FastCompany, TNW, Smashing Magazine, and Medium. You can find some of my latest writing below.
+            </Text>
+        </Stack>
+      </Container >
+    );
+  }
