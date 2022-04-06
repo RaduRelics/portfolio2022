@@ -1,10 +1,10 @@
 import React from 'react'
 import NextLink from 'next/link'
-import { useColorMode, useColorModeValue, Heading, Text, Flex, Box, Link } from '@chakra-ui/react'
+import { useColorMode, useColorModeValue, Heading, Text, Flex, Stack, Box, Link, Spacer } from '@chakra-ui/react'
 import { parseISO, format } from 'date-fns'
 import { ArrowRightIcon } from '@chakra-ui/icons'
 
-const BlogPost = ({ title, publishedAt, summary, slug }) => {
+const BlogPost = ({ title, publishedAt, summary, slug, featuredImage }) => {
   const { colorMode } = useColorMode()
   const secondaryTextColor = {
     light: 'gray.700',
@@ -13,61 +13,47 @@ const BlogPost = ({ title, publishedAt, summary, slug }) => {
 
   return (
     <NextLink href={`/blog/${slug}`} passHref>
-      <Link my="0 !important" w="100%" _hover={{ textDecoration: 'none' }}>
-        <Box display="block" width="100%"
-          borderBottom='1px solid #0000001a'
+      <Link color={"white"} my="0 !important" w="100%" _hover={{ textDecoration: 'none' }}>
+        <Box position="relative" p="16px" display="block" width="230px" h="268px" borderRadius="12px"
+          bg={featuredImage ? `url(${featuredImage})` : '#343434'}
+          boxShadow="inset 0 0 0 1000px rgba(0,0,0,0.5)"
+          bgPos="center" bgSize="cover"
+          backdropFilter={`blur(10px)`}
         >
-          <Flex flexDirection={['column', 'row']} justifyContent="space-between" alignItems="center">
-            <Flex
-              width="100%"
-              align="flex-start"
-              justifyContent="space-between"
-              flexDirection={['column', 'row']}
-            >
-              <Flex alignSelf={{base: 'left', lg:"center"}}>
-                <Text
-                  color={useColorModeValue("gray.700", "white.100")}
-                  minWidth="140px"
-                  textAlign='left'
+          <Box alignSelf={{ base: 'center', lg: "center" }}>
 
-                  fontSize={{base: '18px', sm: '18px', md: '25px', lg:'25px'}}
-                  lineHeight={{base: '28px',sm:'28px',md:'35px',lg:'35px'}}
-                  fontWeight='200'
-                  padding={{base: '40px 0px 10px 0px', sm: '40px 0px 10px 0px', md: '50px 0px', lg: '50px 0px'}}
-                  opacity='0.7'
-                >
-                  {format(parseISO(publishedAt), 'MMMM dd, yyyy')}
-
-                </Text>
-              </Flex>
-              <Box borderRight={{base: '0', sm: '0', md:'1px solid #0000001a', lg:'1px solid #0000001a'}}
-                padding={{base: '0px 0px 40px 0px', sm: '0px 0px 40px 0px', md: '50px 40px',lg:'50px 40px'}}>
-                <Flex flexDirection="column" textAlign={{base: "left", sm: "left", md: "right", lg: "right"}} justifyContent="start" width="100%">
-                  <Heading
-                    fontSize={{base: '22px',sm: '22px',md: '32px',lg:"32px"}}
-                    mb={1}
-                    lineHeight={{base: '32px', sm: '32px', md: '42px',lg:'42px'}}
-                    fontWeight='200'
-
-                    letterSpacing='1px'
-                  >
-                    {title}
-                  </Heading>
-                </Flex>
-                <Text 
-                fontSize="18px"
-                mt= '8px'
-                color={useColorModeValue('#6b6b6b', '#8c8c8c')}>{summary}</Text>
-              </Box>
-
-
-
-
+            <Flex flexDirection="column" textAlign={"left"} justifyContent="start" width="100%">
+              <Heading
+                fontSize={{ base: '22px', sm: '22px', md: '1.75rem', lg: "1.75rem" }}
+                mb={1}
+                fontWeight='200'
+              >
+                {title}
+              </Heading>
             </Flex>
-            <Flex display={{base: 'none', sm: 'none', md: 'none', lg: 'flex' }}alignSelf="center" justifyContent="center" px="50px">
-              <ArrowRightIcon h={8} w={8} color={useColorModeValue("#000", "#fff")} />
-            </Flex>
-          </Flex>
+            <Text
+              fontSize="18px"
+              mt='8px'
+              color={useColorModeValue('#abaaaa', '#abaaaa')}
+              >
+                {summary}
+              </Text>
+          </Box>
+
+          <Text
+            color={useColorModeValue("white.100", "white.100")}
+            minWidth="140px"
+            textAlign='left'
+
+            fontSize={{ base: '18px', sm: '18px', md: '18px', lg: '18px' }}
+            fontWeight='200'
+            bottom="1rem"
+            left="1rem"
+            d="flex"
+            position={'absolute'}
+          >
+            {format(parseISO(publishedAt), 'MMMM dd, yyyy')}
+          </Text>
         </Box>
       </Link>
     </NextLink>

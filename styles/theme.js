@@ -1,6 +1,15 @@
 import { theme as chakraTheme } from '@chakra-ui/react'
 import { extendTheme } from "@chakra-ui/react"
 import { createBreakpoints } from "@chakra-ui/theme-tools"
+import { mode } from '@chakra-ui/theme-tools'
+
+const styles = {
+    global: props => ({
+      body: {
+        bg: mode('#FFE4DF', '#202023')(props)
+      }
+    })
+  }
 
 const fonts = {
     ...chakraTheme.fonts,
@@ -38,7 +47,11 @@ const overrides = {
         "6xl": "64px",
     },
 }
+const config = {
+    initialColorMode: 'light',
+    useSystemColorMode: true
+}
 
-const customTheme = extendTheme(overrides)
+const customTheme = extendTheme({styles, fonts, breakpoints, overrides, config})
 
 export default customTheme

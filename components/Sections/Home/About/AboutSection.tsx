@@ -14,7 +14,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 export default function CallToActionWithIllustration() {
     const { colorMode } = useColorMode()
     return (
-        <Container bg={useColorModeValue("#FFE4DF","#000")} pt={{ base: '100px', sm: '100px', md: '150px', lg: '340px' }} pb='300px' maxW="100%">
+        <Container pt={{ base: '100px', sm: '100px', md: '150px', lg: '340px' }} pb='300px' maxW="100%">
             <Container maxW={'8xl'} id="about">
                 <Stack
                     direction={["column", "row"]}>
@@ -22,7 +22,7 @@ export default function CallToActionWithIllustration() {
                         mr='80px'
                         width="100%"
                     >
-                        <ScrollAnimation style={{ marginTop: '0 !important' }} animateIn="zoomIn" delay={300} animateOnce={true}>
+                        <ScrollAnimation style={{ marginTop: '0 !important' }} animateIn="zoomIn" delay={0} animateOnce={true}>
 
                             {/* <Image
                                 width={{base: "296px", sm: "296px", md:"623px",lg:"623px"}}
@@ -35,7 +35,7 @@ export default function CallToActionWithIllustration() {
                                 width="auto"
                                 height="auto"
                                 maxWidth='100%'
-                                src="/img/photo.jpg"
+                                src="/images/photo.jpg"
                                 alt="Picture of Radu Mihai Alexandru"
                             />
                         </ScrollAnimation>
@@ -45,7 +45,7 @@ export default function CallToActionWithIllustration() {
                         align={'left'}
                         spacing={{ base: 8, md: 10 }}
                     >
-                        <ScrollAnimation style={{ marginTop: '0 !important' }} animateIn="fadeInDown" delay={500} animateOnce={true}>
+                        <ScrollAnimation style={{ marginTop: '0 !important' }} animateIn="fadeInDown" delay={200} animateOnce={true}>
 
                             <Heading className="stroke" color="transparent" fontSize={{ base: '50px', sm: '50px', md: '50px', lg: '100px' }} lineHeight="120%" fontWeight="400">
                                 Hello !
@@ -53,7 +53,7 @@ export default function CallToActionWithIllustration() {
                                 I am Mihai
                             </Heading>
                         </ScrollAnimation>
-                        <ScrollAnimation style={{ marginTop: '0 !important' }} animateIn="fadeInDown" delay={700} animateOnce={true}>
+                        <ScrollAnimation style={{ marginTop: '0 !important' }} animateIn="fadeInDown" delay={300} animateOnce={true}>
 
                             <Heading
                                 mt='15px !important'
@@ -69,7 +69,7 @@ export default function CallToActionWithIllustration() {
                             </Heading>
                         </ScrollAnimation>
 
-                        <ScrollAnimation style={{ marginTop: '0 !important' }} animateIn="fadeIn" delay={1000} animateOnce={true}>
+                        <ScrollAnimation style={{ marginTop: '0 !important' }} animateIn="fadeIn" delay={400} animateOnce={true}>
 
                             <Text
                                 my='35px !important'
@@ -84,7 +84,7 @@ export default function CallToActionWithIllustration() {
                                 One of my goals during a project is to make sure we are always on the same page by documenting and communicating about the journey.
                             </Text>
                         </ScrollAnimation>
-                        <ScrollAnimation style={{ marginTop: '0 !important' }} animateIn="zoomIn" delay={1000} animateOnce={true}>
+                        <ScrollAnimation offset={850} style={{ marginTop: '0 !important' }} animateIn="zoomIn" delay={500} animateOnce={true}>
 
                             <NextLink href="mailto:miihairadu@gmail.com">
                                 <div className="cursorHover">

@@ -1,0 +1,112 @@
+---
+title: 'Web3 and Ethereum'
+publishedAt: '2021-12-18'
+summary: 'Technical details on what Web3 and Ethereum are.'
+featuredImage: '/images/contents/web3.jpg'
+---
+
+![](/images/contents/web3-banner.png)
+
+Recently, near the end of 2021, Web3 has been trending as more and more people started talking about it. It introduces a new way of building applications and because of this, there have been a lot of misconceptions.
+
+In this article, I'll talk about some of its technical details, how it can be used to build applications and of course, about its central technology: Ethereum.
+
+# Web3
+
+With web3, developers can now build **daps** (decentralized applications). Contrary to the current standard, Web2, dapps are not controlled and censored by a central entity such as a corporation. The frontend can be built with any language and framework, just like a Web2 app, but in the backend, where we used languages like JavaScript, Python, etc. we can now write **Smart Contracts** which run on the **Blockchain**. We'll dive deeper into this in the Ethereum section.
+So basically, the frontend can be the same as it is now, but the backend now runs on a decentralized network.
+
+# Ethereum
+
+Ethereum represents the network of computers that are connected to the blockchain. It's running from the Ethereum Virtual Machine, a single, canonical computer, represented by the computing power of the miners. I hear you ask: *Why is Ethereum special? Why isn't Bitcoin or Dogecoin, the main currency of the Web3?* It's because Ethereum isn't just a cryptocurrency, it has support for smart contracts, which can run decentralized on the blockchain. Since those are Turing complete, you can build almost any product using Solidity, the programming language for Smart Contracts, deploy it on the Blockchain and have your code running on the EVM! This allowed the creation of many things, like NFTs (Non-fungible tokens), which are just digital proof of ownership powered by smart contract on the Blockchain.
+Here is an example of how a smart contract for an NFT can be written:
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/utils/Counters.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
+
+contract MyNFT is ERC721URIStorage, Ownable {
+    using Counters for Counters.Counter;
+    Counters.Counter private _tokenIds;
+
+    constructor() public ERC721("MyNFT", "NFT") {}
+
+    function mintNFT(address recipient, string memory tokenURI)
+        public onlyOwner
+        returns (uint256)
+    {
+        _tokenIds.increment();
+
+        uint256 newItemId = _tokenIds.current();
+        _mint(recipient, newItemId);
+        _setTokenURI(newItemId, tokenURI);
+
+        return newItemId;
+    }
+}
+```
+
+This is not a Solidity tutorial, but as a big overview, the code above:
+
+- creates a MyNFT smart contract, with a mintNFT function
+- it takes the wallet address as the recipient and the NFT metadata (a JSON document) as the tokenURI
+- mintNFT calls some methods from the inherited ERC-721 library, and ultimately returns a number that represents the ID of the freshly minted NFT.
+
+# Accounts
+
+There are two types of accounts in the Ehtereum network:
+- The **default account**, owned by humans, the account that is used to send transactions. It's the one that is used by default in the frontend and that can be created for free. 
+- The **wallet account**, owned by smart contracts, the account that is used to send transactions to the smart contracts and the one that costs Ether because it's consuming the EVM's computing power.
+
+# Ether
+
+Ether (ETH) is the primary currency on the Ethereum network. You might've heard Ether being referred to as Ethereum, this is a mistake. Whenever you create a transaction, a small fee of ETH gets paid to the miner. TO host and run smart contracts on the Blockchain, you also have to pay in ETH for the computing power used.
+
+# Mining
+
+Whenever you create a transaction, its data gets added to a block. The block consists of dozens of other transactions. To verify the legitimacy of those blocks, computers from the EVM, also known as nodes, take part in a competition to solve a "puzzle" using brute force, the first one to finish gets the ETH fee.
+
+# Gas
+
+The gas is the fuel powering the Ethereum network. It's used to measure the computational effort required to execute a specific task on the EVm. Thus the miners can get paid. As of December 2021, each block has a gas limit and a base fee, the users are allowed to send a tip to the miner. The transaction fee equals to `Gas units (limit) * (Base fee + tip)`, measured in Gwei. The Ethereum Network can adjust the size of a block depending on the demand. This means if the block size is greater, the protocol will increase the base fee for the following block. Similarly, the protocol will decrease the base fee if the block size is less. This way the fee accords to the demand of the block. The gas fee needs to exist so the computation power of the EVM isn’t wasted, since the user needs to pay real money for it.
+
+# The Big Picture
+
+That's a lot of information so let's try to simplify it. 
+
+### The Ethereum network is composed of:
+- The **Ethereum Virtual Machine**, a single computer that runs the EVM.
+- The **Blockchain**, a decentralized network of computers that store the transactions and the blocks.
+- The **Ethereum Network**, a network of computers that are connected to the EVM.
+
+### A potential tech stack of a Web3 dapp:
+- The frontend is built with any language and framework, just like a Web2 app.
+- The backend uses Solidity running as a Smart Contract on the Ethereum Network.
+
+### What happens when you create a transaction:
+- The transaction gets filled with the rquired metadata.
+- It gets appended to a block.
+- The block gets added to the Blockchain.
+- The miners verify its legitimacy.
+- Nodes on the network start competing.
+- You pay the gas fee.
+- The changes are applied to the global state of the EVM.
+
+I hope this article helped in clearing out some details about the upcoming Web3.
+
+# References:
+
+- [Web3](https://web3js.readthedocs.io/en/v1.2.1/web3-eth.html)
+- [Ethereum Virtual Machine](https://ethereum.stackexchange.com/questions/13/what-is-the-evm-and-what-is-it-used-for)
+- [Ethereum Network](https://ethereum.stackexchange.com/questions/13/what-is-the-evm-and-what-is-it-used-for)
+- [Blockchain](https://ethereum.stackexchange.com/questions/13/what-is-the-evm-and-what-is-it-used-for)
+- [Wikipedia page for Ethereum](https://en.wikipedia.org/wiki/Ethereum)
+- [Ethereum Developer Documentation](https://ethereum.org/en/developers/docs/)
+- [Ethereum Virtual Machine](https://ethereum.stackexchange.com/questions/13/what-is-the-evm-and-what-is-it-used-for)
+- ["Is Web3 all Hype?", from Fireship](https://youtu.be/wHTcrmhskto)
+- [Web3 and Ethereum, from a friend](https://stefan-asandei.cf/posts/web3-and-ethereum/)
+- [What is web3?](https://web3isgoinggreat.com/)

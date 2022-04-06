@@ -44,23 +44,15 @@ export default function HeroSection() {
           spacing={{ base: 8, md: 10 }}
         >
           <Stack zIndex="1">
-            <ScrollAnimation animateIn="fadeInDown" delay={500} animateOnce={true}>
-              {/*<Text fontSize={{ base: '24px', sm: '24px', md: '24px', lg: '24px' }} fontWeight="400">
-                Full Stack designer & developer
-                 <br />
-            <Text fontWeight="700" color={useColorModeValue("#e43c47", "#40b4ed")}>
-              ‍into reality
-            </Text> 
-              </Text>*/}
+            <ScrollAnimation animatePreScroll={true} animateIn="fadeInDown" delay={500} animateOnce={true}>
+
               <Heading fontFamily="Bebas Neue" color="#fff" fontSize={{ base: '65px', sm: '80px', md: '150px', lg: '200px' }} lineHeight={{ base: "80px", sm: "80px", md: "138px", lg: "180px" }} fontWeight="400">
                 DESIGN. BRANDING. DEVELOPMENT.
 
               </Heading>
             </ScrollAnimation>
           </Stack>
-          {/* <ScrollAnimation style={{ marginTop: '0px !important' }} animateIn="fadeInUp" delay={400} animateOnce={true}>
-            <Line />
-          </ScrollAnimation> */}
+
           <Stack
             display={{ base: 'none', sm: 'none', md: 'none', lg: 'block' }}
             position='absolute'
@@ -73,7 +65,7 @@ export default function HeroSection() {
           >
             <Parallax y={[-20, 20]}>
 
-              <ScrollAnimation animateIn="zoomIn" delay={700} animateOnce={true}>
+              <ScrollAnimation animatePreScroll={true} animateIn="zoomIn" delay={700} animateOnce={true}>
                 <Image
                   draggable="false"
                   styles="mix-blend-mode: luminosity"
@@ -81,12 +73,12 @@ export default function HeroSection() {
                   height="850px"
                   filter='grayscale(100%)'
                   alt="Photo"
-                  src="/img/photo.jpg" />
+                  src="/images/photo.jpg" />
               </ScrollAnimation>
             </Parallax>
           </Stack>
         </Stack>
-        <ScrollAnimation animateIn="fadeInRight" delay={600} animateOnce={true}>
+        <ScrollAnimation animatePreScroll={true} animateIn="fadeInLeft" delay={600} animateOnce={true}>
 
           <Container justify="center" maxW={'560px'} mt={{ base: '10px', sm: '10px', md: '10px', lg: '10px' }} mx="0 !important" px="0 !important">
             <Text
@@ -99,8 +91,8 @@ export default function HeroSection() {
           </Container>
         </ScrollAnimation>
 
-        <Flex mt='65px' justify="left">
-          <ScrollAnimation animateIn="zoomIn" delay={900} animateOnce={true}>
+        <Flex mt='30px' justify="left">
+          <ScrollAnimation animatePreScroll={true} delay={800} animateIn="zoomIn" animateOnce={true}>
             {/* <CircleButton /> */}
             <NextLink href="mailto:miihairadu@gmail.com">
               <div className="cursorHover">

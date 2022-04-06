@@ -19,7 +19,7 @@ const GlobalStyle = ({ children }) => {
   return (
     <>
       <Head>
-        <link rel="icon" href="/img/favicon.ico" />
+        <link rel="icon" href="/images/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <script
@@ -85,7 +85,7 @@ const GlobalStyle = ({ children }) => {
         styles={css`
           ${colorMode === 'light' ? prismLightTheme : prismDarkTheme};
           ::selection {
-            background-color: ${colorMode === 'light' ? '#e43c47' : '#40b4ed'};
+            background-color: ${colorMode === 'light' ? '#ff0047' : '#40b4ed'};
             color: white;
           }
           ::-moz-selection {
@@ -150,7 +150,7 @@ const GlobalStyle = ({ children }) => {
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            background: ${colorMode === 'light' ? '#ff0047' : '#0089ff'};
+            //background: ${colorMode === 'light' ? '#ff0047' : '#0089ff'};
             //Orange: #fb8b23
             //Gray thing: #0a141f
           }
@@ -195,21 +195,14 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <ChakraProvider resetCSS theme={customTheme}>
-      <ColorModeProvider
-        options={{
-          initialColorMode: "light",
-          useSystemColorMode: false,
-        }}
-      >
-        <GlobalStyle>
-          {typeof window !== 'undefined' && (
-            <CCursor />
-          )}
-          <ParallaxProvider>
-            <Component {...pageProps} />
-          </ParallaxProvider>
-        </GlobalStyle>
-      </ColorModeProvider>
+      <GlobalStyle>
+        {typeof window !== 'undefined' && (
+          <CCursor />
+        )}
+        <ParallaxProvider>
+          <Component {...pageProps} />
+        </ParallaxProvider>
+      </GlobalStyle>
     </ChakraProvider>
   )
 }

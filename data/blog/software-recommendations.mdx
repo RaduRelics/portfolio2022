@@ -1,0 +1,42 @@
+---
+title: 'Software Recommendations'
+publishedAt: '2022-03-22'
+summary: 'Software I use daily and I recommend others to use.'
+featuredImage: '/images/contents/soft-1.jpg'
+---
+A lot of people know that I love to use FOSS (free and open-source software).
+But while I try to answer as many questions about which software replacement others should choose, I cannot possibly cover every piece of software.
+
+This article simply contains the software I use and recommend; Most of it requires little to no elite® knowledge of GNU/Linux or software in general; *which doesn't mean learning is bad.*
+
+# Operating Systems
+**I prefer to run UNIX-like operating systems.**
+Of course for the most part I run GNU/Linux systems; Operating systems based off the GNU core utilities and the Linux kernel that some people call "Linux distros" for brevity. My Linux distro of choice is [Arch Linux](https://archlinux.org/), mostly because it offers a fast package manager with a large-enough pool of updated software, all the configuration and software is kept as simple as possible making maintenance a breeze, and the Arch User Repository offers an excellent way to installs packages outside of the relatively small vanilla repos. ***The AUR makes Arch (probably) the single distro with most software available for it.***
+
+**However this doesn't mean Arch Linux is flawless...**
+
+# (Other) Operating Systems
+I think many more advanced Linux users wish to compile more software, for example their [kernel](https://kernel.org/), from source. Compiling your software from source offers a lot of performance advantages, and for this a distribution like [Gentoo](https://www.gentoo.org/) or [KISS Linux](https://k1ss.org/) is what I'd recommend. Some may prefer a completely different approach to package management and system configuration though, for that I'd recommend something like [NixOS](https://nixos.org/). It allows you to roll back to previous package versions, makes it extremely easy to share your configuration with others and allows you to install multiple versions of the same package.
+
+There is also the issue of [systemd](https://systemd.io/), the init system of choice for Arch Linux. Systemd does not follow the UNIX philosophy of being a small, simple, one-purpose program that's easy to understand; Just like the Linux kernel, it is large and ever-growing, and mostly monolithic. I choose to use systemd and Arch Linux merely out of necessity and convenience; A distribution such as Artix, Arch Linux without systemd, may ship more broken or incomplete packages. There are also some packages I use that rely on systemd. If you are willing to live with these slight flaws, then [Artix](https://artixlinux.org/), [Devuan](https://www.devuan.org/) or [Void](https://voidlinux.org/) is for you.
+
+For some people that just isn't enough, they just want to get the GNU out of Linux, for that [Alpine Linux](https://alpinelinux.org/) works wonders, being based on musl and Busybox instead of GNU Coreutils and is using OpenRC as its init system, it’s perfect for those who prefer a lightweight and secure operating system.
+
+If you wish to wonder outside the boundaries of Linux, you can give BSD a shot. What I’d recommend is [FreeBSD](https://www.freebsd.org/). BSD is similar to Linux, in the sense that it is still a UNIX-like operating system, but it has a completely different philosophy when it comes to how certain things should work, I might go in detail in a future article.
+
+# Shell
+I normally have multiple shells installed on my system at once; **[Fish](https://fishshell.com/) and [ZSH](https://www.zsh.org/) or Bash.** I have Fish set to my user shell due to its convenient auto-complete and memory functions along with its wonderful color-scheme compared to boring 'ol Bash. *However,* sometimes I use ZSH with [OhMyZSH](https://ohmyz.sh/) mostly for the same reasons as Fish, but I still keep Bash in case anything breaks or if I occasionally want to run more complex one-liner commands. 
+
+# Text Editing
+My choice of text editor is often [vim](https://www.vim.org/) or a fork of it: [neovim](https://neovim.io/); it offers a lot of complex and powerful functionality while also being usable by anyone who can open and type in a terminal. However, while I mostly use neovim to write I understand why people may wish to use a more "user friendly" option such as a graphical text editor. **For those who prefer graphical text editors I recommend [gedit](https://wiki.gnome.org/Apps/Gedit), but if you still prefer something terminal-based you can always use [nano](https://www.nano-editor.org/) as it may be easier to get used to than vim.** *I have also started using [emacs](https://www.gnu.org/software/emacs/) for text editing, [DOOM emacs](https://github.com/hlissner/doom-emacs) to be precise, while I love it, I cannot give a fair comparison to other text editors as I haven’t used it as much.*
+
+# Window Management/"DE"
+I personally prefer using the [Openbox](https://openbox.org/) floating window manager or some tiling window manager such as [Awesome](https://awesomewm.org/) or [XMonad](https://xmonad.org/). I find them more efficient at getting out of my way and putting an emphasis on what I really care about: The actual programs I run on my machine. *I have also been working on my own window manager, so who knows, maybe in the future I will be using only that.*
+
+# Web Browser
+My “normie” web browser of choice is [Ungoogled Chromium.](https://github.com/Eloston/ungoogled-chromium) This is a fork of Google's Chromium, but with all Google spyware and bloat removed. You get the performance and wide support of Google Chrome, without any of the privacy concerns. I chose to use this web browser simply because it's the most "minimalist" of them all, not counting independent web browsers like [Suckless' Surf.](https://surf.suckless.org/)
+
+A similar web browser is [LibreWolf;](https://librewolf.net/) essentially Firefox, but with all telemetry and Mozilla bloat removed. It also includes uBlock Origin, which to some people is a plus. Then there's also the [Brave Browser,](https://brave.com/) which blocks ads and shows you more "privacy respecting" ads to pay you in their crypto, BAT. I find it to be a bit bloated and not exactly my sorta thing, but I don't hate it or oppose people using it. Another browser I found out about recently that seemed really interesting was [qutebrowser;](https://qutebrowser.org/) you essentially have vim-like keybindings in a minimal browser.
+
+**That's pretty much it for me. Most of my other recommendations of software will probably either be added here or written about in another article.**
+

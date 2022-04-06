@@ -1,56 +1,434 @@
 [
   {
+    "showHome": true,
     "project_number": 1,
-    "project_tags": "PRODUCT DESIGN, PROTOTYPING, DEVELOPMENT",
+    "project_tags": "SOCIAL MEDIA PLATFORM",
+    "project_name": "Pinnet",
+    "project_description": "This is a yet another collection of projects that are aimed specifically at manipulating data from your YouTube videos. Have you ever seen the This video has X views videos or ever wanted to change the title/description/tags of a bunch of videos at once? These projects are made just for that. Developed with React.js/Javascript.",
+    "project_url": "https://pinnet.ml/",
+    "project_git": "#",
+    "project_image": "/images/works/pinnet_eyecatch.png"
+  },
+  {
+    "showHome": true,
+    "project_number": 2,
+    "project_tags": "AESTHETIC TO DO APP",
+    "project_name": "Todoer",
+    "project_description": "An aesthetic To Do App that makes doing chores fun and easy.",
+    "project_id": "todoer",
+    "project_url": "#",
+    "project_image": "/images/works/todoer_eyecatch.png"
+  },
+  {
+    "showHome": true,
+    "project_number": 3,
+    "project_tags": "WALLPAPER APP WITH OVER A MILLION IMAGES",
+    "project_name": "WallSplash",
+    "project_description": "A wallpaper app with over a million copyright-free wallpapers and photos.",
+    "project_id": "wallsplash",
+    "project_url": "#",
+    "project_image": "/images/works/wallsplash_eyecatch.png"
+  },
+  {
+    "showHome": true,
+    "project_number": 4,
+    "project_tags": "CUSTOM X11 WINDOW MANAGER",
+    "project_name": "Custom WM",
+    "project_description": "A custom X11 tiling window manager written in C++.",
+    "project_id": "custom-wm",
+    "project_url": "#",
+    "project_image": "/images/works/custom_wm.png"
+  },
+  {
+    "showHome": true,
+    "project_number": 5,
+    "project_tags": "PRODUCT DESIGN AND DEVELOPMENT",
     "project_name": "DollaBank",
     "project_description": "This project consists of a simple wallpaper app. Consume an API and return the data. You can choose a certain category of wallpapers, search for one containing a certain word, save and apply them, etc. Developed with Flutter.",
     "project_url": "#",
     "project_git": "#",
-    "project_image": "/img/dolla.png"
+    "project_image": "/images/works/dolla_eyecatch.png"
   },
   {
-    "project_number": 2,
-    "project_tags": "PRODUCT DESIGN, PROTOTYPING, DEVELOPMENT",
+    "showHome": true,
+    "project_number": 6,
+    "project_tags": "SECURE MODERATED CHAT APP",
     "project_name": "FireChat",
     "project_description": "This is a collection of projects that aim to automate boring tasks with code. Open many apps at once or on startup, automatically open YouTube to the newest video that one youtuber you always watch posted, crawl/scrape the web, etc. Developed with Python/Javascript.",
-    "project_url": "#",
+    "project_url": "https://github.com/michaelradu/firechat",
     "project_git": "#",
-    "project_image": "/img/firechat.png"
+    "project_image": "/images/works/firechat_eyecatch.png"
   },
   {
-    "project_number": 3,
-    "project_tags": "PRODUCT DESIGN, PROTOTYPING, DEVELOPMENT",
+    "showHome": true,
+    "project_number": 7,
+    "project_tags": "BRANDING DESIGN, WEB DESIGN",
     "project_name": "JocSecund Brand",
     "project_description": "This project consists of a personal blog, where in the future I will make posts giving tips and passing on knowledge that I acquired and that I will acquire throughout my career. In this project I learned how to use new libraries and I was able to try Next.js. It was one of my first projects with Next.js. Developed with Next.js, MDX and TypeScript.",
     "project_url": "#",
     "project_git": "#",
-    "project_image": "/img/jocsecund.png"
+    "project_image": "/images/works/jocsecund_eyecatch.png"
   },
   {
-    "project_number": 4,
-    "project_tags": "PRODUCT DESIGN, PROTOTYPING, DEVELOPMENT",
+    "showHome": true,
+    "project_number": 8,
+    "project_tags": "BRAND IDENTITY DESIGN",
+    "project_name": "Imaa City Brand",
+    "project_description": "A brand identity design system for a local real estate agency.",
+    "project_id": "imaa-city",
+    "project_url": "#",
+    "project_image": "/images/works/imaa_eyecatch.png"
+  },
+  {
+    "showHome": true,
+    "project_number": 9,
+    "project_tags": "WEB APP TO TRACK COVID",
     "project_name": "COVID-19 Track",
     "project_description": "This is a collection of projects that are mostly games made to pass the time or entertain people. Most of them are pretty short, but there are some better arcade/indie games I made in there too. I was able to learn a lot from these projects. I learned how games work, how to create pixel art, levels, music, etc. Developed with Unity/Python/C++.",
     "project_url": "#",
     "project_git": "#",
-    "project_image": "/img/covid19-corona.png"
+    "project_image": "/images/works/covid19-track_eyecatch.png"
   },
   {
-    "project_number": 5,
-    "project_tags": "PRODUCT DESIGN, PROTOTYPING, DEVELOPMENT",
+    "showHome": true,
+    "project_number": 10,
+    "project_tags": "SUITE OF TOOLS",
     "project_name": "YouTube Data Manipulation",
     "project_description": "This is a yet another collection of projects that are aimed specifically at manipulating data from your YouTube videos. Have you ever seen the This video has X views videos or ever wanted to change the title/description/tags of a bunch of videos at once? These projects are made just for that. Developed with React.js/Javascript.",
     "project_url": "#",
     "project_git": "#",
-    "project_image": "/img/project-image.png"
+    "project_image": "/images/works/temp_image.png"
   },
   {
-    "project_number": 6,
-    "project_tags": "PRODUCT DESIGN, PROTOTYPING, DEVELOPMENT",
-    "project_name": "Pinnet",
-    "project_description": "This is a yet another collection of projects that are aimed specifically at manipulating data from your YouTube videos. Have you ever seen the This video has X views videos or ever wanted to change the title/description/tags of a bunch of videos at once? These projects are made just for that. Developed with React.js/Javascript.",
+    "showHome": true,
+    "project_number": 11,
+    "project_tags": "CUSTOM KERNEL WRITTEN IN ASSEMBLY X86 AND C",
+    "project_name": "Custom OS Kernel",
+    "project_description": "A custom OS kernel and bootloader written in Assembly x86 and C.",
+    "project_id": "custom-os-kernel",
     "project_url": "#",
-    "project_git": "#",
-    "project_image": "/img/project-image.png"
+    "project_image": "/images/works/custom_kernel.png"
+  },
+  {
+    "showHome": true,
+    "project_number": 12,
+    "project_tags": "META CRYPTOCURRENCY",
+    "project_name": "MihaiCoin",
+    "project_description": "A meta cryptocurrency implemented in Javascript.",
+    "project_id": "mihaicoin",
+    "project_url": "https://github.com/michaelradu/MihaiCoin",
+    "project_image": "/images/works/mihaicoin_eyecatch.png"
+  },
+  {
+    "showHome": false,
+    "project_number": 13,
+    "project_tags": "META CRYPTOCURRENCY",
+    "project_name": "MihaiCoin",
+    "project_description": "A meta cryptocurrency implemented in Javascript.",
+    "project_id": "mihaicoin",
+    "project_url": "#",
+    "project_image": "/images/works/mihaicoin_eyecatch.png"
+  },
+  {
+    "showHome": false,
+    "project_number": 14,
+    "project_tags": "INTERPERTED ESTOERIC BASIC-like PROGRAMMING LANGUAGE",
+    "project_name": "Ratatom Basic",
+    "project_id": "ratatom-basic",
+    "project_url": "https://github.com/michaelradu/firechat",
+    "project_image": "/images/works/ratatom-basic.png"
+  },
+  {
+    "showHome": false,
+    "project_number": 15,
+    "project_tags": "Cryptocurrency tracking app",
+    "project_name": "CryptoTrack",
+    "project_id": "cryptotrack",
+    "project_url": "#",
+    "project_image": "/images/works/temp_image.png"
+  },
+  {
+    "showHome": false,
+    "project_number": 15,
+    "project_tags": "The classic Tetris game with a twist.",
+    "project_name": "Tetris Redux",
+    "project_id": "tetris-redux",
+    "project_url": "#",
+    "project_image": "/images/works/temp_image.png"
+  },
+  {
+    "showHome": false,
+    "project_number": 16,
+    "project_tags": "The classic Flappy Bird game but you can play as anything.",
+    "project_name": "Flappy Everything",
+    "project_id": "flappy-everything",
+    "project_url": "#",
+    "project_image": "/images/works/temp_image.png"
+  },
+  {
+    "showHome": false,
+    "project_number": 17,
+    "project_tags": "A game where you run for your life and try to avoid the obstacles.",
+    "project_name": "RUN FOR YOUR LIFE",
+    "project_id": "run-for-your-life",
+    "project_url": "#",
+    "project_image": "/images/works/temp_image.png"
+  },
+  {
+    "showHome": false,
+    "project_number": 18,
+    "project_tags": "WIP 2D Game Engine written from scratch",
+    "project_name": "Prometheus",
+    "project_id": "prometheus",
+    "project_url": "#",
+    "project_image": "/images/works/prometheus_01.png"
+  },
+  {
+    "showHome": false,
+    "project_number": 19,
+    "project_tags": "WIP 2D Fantasy RPG made in Unity for a game-jam.",
+    "project_name": "Fantasy RPG",
+    "project_id": "fantasy-rpg",
+    "project_url": "#",
+    "project_image": "/images/works/temp_image.png"
+  },
+  {
+    "showHome": false,
+    "project_number": 20,
+    "project_tags": "6502 CPU emulator written in C++.",
+    "project_name": "6502 CPU EMULATOR",
+    "project_id": "6502-cpu-emulator",
+    "project_url": "#",
+    "project_image": "/images/works/6502_emulator.png"
+  },
+  {
+    "showHome": false,
+    "project_number": 21,
+    "project_tags": "Glossy electron markdown note-taking app",
+    "project_name": "RemarkIt",
+    "project_id": "remarkit",
+    "project_url": "#",
+    "project_image": "/images/works/temp_image.png"
+  },
+  {
+    "showHome": false,
+    "project_number": 22,
+    "project_tags": "Custom Arch-based Linux distro",
+    "project_name": "NovelOS",
+    "project_id": "novelos",
+    "project_url": "#",
+    "project_image": "/images/works/temp_image.png"
+  },
+  {
+    "showHome": false,
+    "project_number": 23,
+    "project_tags": "Personal AI Assistant",
+    "project_name": "Personal Assistant",
+    "project_id": "personal-assistant",
+    "project_url": "#",
+    "project_image": "/images/works/temp_image.png"
+  },
+  {
+    "showHome": false,
+    "project_number": 24,
+    "project_tags": "Platform for the creation of a digital library of art.",
+    "project_name": "Arte LIIS",
+    "project_id": "arteliis",
+    "project_url": "#",
+    "project_image": "/images/works/arteliis-eyecatch.png"
+  },
+  {
+    "showHome": false,
+    "project_number": 25,
+    "project_tags": "Wikipedia-like digital library for history.",
+    "project_name": "Istorie LIIS",
+    "project_id": "istorieliis",
+    "project_url": "#",
+    "project_image": "/images/works/temp_image.png"
+  },
+  {
+    "showHome": false,
+    "project_number": 26,
+    "project_tags": "Web visualization of various pathfinding algorithms.",
+    "project_name": "Pathfinding Visualizer",
+    "project_id": "pathfinding-visualizer",
+    "project_url": "#",
+    "project_image": "/images/works/temp_image.png"
+  },
+  {
+    "showHome": false,
+    "project_number": 27,
+    "project_tags": "Open source web office",
+    "project_name": "OpenDocs",
+    "project_id": "opendocs",
+    "project_url": "https://github.com/michaelradu/open-docs",
+    "project_image": "/images/works/temp_image.png"
+  },
+  {
+    "showHome": false,
+    "project_number": 28,
+    "project_tags": "Web visualization of various sorting algorithms",
+    "project_name": "Sorting Visualizer",
+    "project_id": "sorting-visualizer",
+    "project_url": "#",
+    "project_image": "/images/works/temp_image.png"
+  },
+  {
+    "showHome": false,
+    "project_number": 29,
+    "project_tags": "Web pomodoro timer",
+    "project_name": "Pomodoro Clock",
+    "project_id": "pomodoro-clock",
+    "project_url": "#",
+    "project_image": "/images/works/temp_image.png"
+  },
+  {
+    "showHome": false,
+    "project_number": 30,
+    "project_tags": "A script that helps you save RAM and automates opening apps",
+    "project_name": "Restart where you left off",
+    "project_id": "restart",
+    "project_url": "#",
+    "project_image": "/images/works/temp_image.png"
+  },
+  {
+    "showHome": false,
+    "project_number": 31,
+    "project_tags": "Automation of watching new videos",
+    "project_name": "Notify Me",
+    "project_description": "A python script that automates the process of clicking on a new video from your favorite YouTubers.",
+    "project_id": "notify-me",
+    "project_url": "#",
+    "project_image": "/images/works/temp_image.png"
+  },
+  {
+    "showHome": false,
+    "project_number": 32,
+    "project_tags": "React Markdown editor and previewer",
+    "project_name": "Markdown Previewer",
+    "project_description": "A Markdown editor and previewer written in React.",
+    "project_id": "markdown-previewer",
+    "project_url": "#",
+    "project_image": "/images/works/temp_image.png"
+  },
+  {
+    "showHome": false,
+    "project_number": 33,
+    "project_tags": "POSIX compliant script to create a blog",
+    "project_name": "SSG5 Remix",
+    "project_description": "A modified version of SSG5 that allows users to quickly create a markdown-based blog with an articles list.",
+    "project_id": "ssg5-remix",
+    "project_url": "#",
+    "project_image": "/images/works/temp_image.png"
+  },
+  {
+    "showHome": false,
+    "project_number": 34,
+    "project_tags": "Crawl all the links on a website",
+    "project_name": "Web Crawler",
+    "project_description": "A basic web crawler that allows users to search for a website and crawl all of the links on the page.",
+    "project_id": "web-crawler",
+    "project_url": "#",
+    "project_image": "/images/works/temp_image.png"
+  },
+  {
+    "showHome": false,
+    "project_number": 35,
+    "project_tags": "Python version of my assistant",
+    "project_name": "Python Personal Assistant",
+    "project_description": "A basic personal assistant that can perform tasks like searching the web, playing music, and more.",
+    "project_id": "python-personal-assistant",
+    "project_url": "#",
+    "project_image": "/images/works/temp_image.png"
+  },
+  {
+    "showHome": false,
+    "project_number": 36,
+    "project_tags": "Web app to video call other users",
+    "project_name": "WebRTC Chat",
+    "project_description": "A web app that allows users to chat with each other in real-time using WebRTC.",
+    "project_id": "webrtc-chat",
+    "project_url": "#",
+    "project_image": "/images/works/temp_image.png"
+  },
+  {
+    "showHome": false,
+    "project_number": 37,
+    "project_tags": "Custom theme for various apps",
+    "project_name": "Blackout Theme",
+    "project_description": "A custom theme for WhatsApp Web, Discord (Bandaged BD) and more that puts an emphasis on AMOLED dark mode.",
+    "project_id": "blackout-theme",
+    "project_url": "#",
+    "project_image": "/images/works/temp_image.png"
+  },
+  {
+    "showHome": false,
+    "project_number": 38,
+    "project_tags": "PlayStation 5 Menu Web Version",
+    "project_name": "PS5 Menu",
+    "project_description": "A web app that aims to imitate the menu of the PlayStation 5.",
+    "project_id": "ps5-menu",
+    "project_url": "#",
+    "project_image": "/images/works/temp_image.png"
+  },
+  {
+    "showHome": false,
+    "project_number": 39,
+    "project_tags": "Log all the keys pressed",
+    "project_name": "Keylogger",
+    "project_description": "A python script that logs all of the keys that are pressed on a computer, takes screenshots at a set interval and mails you the data.",
+    "project_id": "keylogger",
+    "project_url": "#",
+    "project_image": "/images/works/temp_image.png"
+  },
+  {
+    "showHome": false,
+    "project_number": 40,
+    "project_tags": "FOSS collection of templates and plugins",
+    "project_name": "Portfolio Starter Kit",
+    "project_description": "A collection of FOSS templates and plugins that can be used to quickly create a portfolio website.",
+    "project_id": "portfolio-starter-kit",
+    "project_url": "#",
+    "project_image": "/images/works/temp_image.png"
+  },
+  {
+    "showHome": false,
+    "project_number": 41,
+    "project_tags": "Web app for face detection",
+    "project_name": "Face Detection Javascript",
+    "project_description": "A web app that detects the faces of a user's webcam and displays them on the screen.",
+    "project_id": "face-detection-javascript",
+    "project_url": "#",
+    "project_image": "/images/works/temp_image.png"
+  },
+  {
+    "showHome": false,
+    "project_number": 42,
+    "project_tags": "Detect a user's face in images or webcams",
+    "project_name": "Face Detection Python",
+    "project_description": "A python script that uses OpenCV to detect the faces of a user's webcam and display them on the screen.",
+    "project_id": "face-detection-python",
+    "project_url": "#",
+    "project_image": "/images/works/temp_image.png"
+  },
+  {
+    "showHome": false,
+    "project_number": 43,
+    "project_tags": "PyGame version of Flappy Bird",
+    "project_name": "Flappy Bird Redux",
+    "project_description": "A remake of the classic Flappy Bird game remade with PyGame for learning purposes.",
+    "project_id": "flappy-bird-redux",
+    "project_url": "#",
+    "project_image": "/images/works/temp_image.png"
+  },
+  {
+    "showHome": false,
+    "project_number": 44,
+    "project_tags": "Play against friends",
+    "project_name": "Tic Tac Toe",
+    "project_description": "A simple Tic Tac Toe game that allows users to play against the computer.",
+    "project_id": "tictactoe",
+    "project_url": "#",
+    "project_image": "/images/works/temp_image.png"
   }
 ]

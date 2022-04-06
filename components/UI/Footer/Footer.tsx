@@ -60,146 +60,118 @@ const SocialButton = ({
 
 export default function SmallCentered() {
   return (
+    <Box
+      bg={useColorModeValue('#FFE4DF', '#202023')}
+    >
+      <ScrollAnimation style={{ margin: '0 !important' }} animateIn="fadeInUp" delay={300} animateOnce={true}>
+        <Box
 
-    <ScrollAnimation style={{ margin: '0 !important' }} animateIn="fadeInUp" delay={300} animateOnce={true}>
-      <Box
-        
-        padding='3rem 20px'
-        bg={useColorModeValue('#FFE4DF', '#000')}
-        color={useColorModeValue('gray.700', 'gray.200')}>
-        <Stack direction={['column','row']} justifyContent="center">
-          <Box>
-            <Container
-            height= '90px'
+          padding='3rem 20px'
+          color={useColorModeValue('gray.700', 'gray.200')}>
+          <Stack direction={['column', 'row']} justifyContent="center">
+            <Box>
+              <Container
+                height='90px'
 
-              fontSize="16px"
-              fontWeight="600"
-              borderTopWidth={1}
-              borderBottomWidth={1}
-              borderStyle={'solid'}
-              borderColor={useColorModeValue('#cecece', 'gray.700')}
-              as={Stack}
-              maxW={'8xl'}
-              py={4}
-              direction={{ base: 'column', md: 'row' }}
-              spacing={4}
-              justify={{ base: 'center', md: 'space-between' }}
-              align={{ base: 'center', md: 'center' }}>
+                fontSize="16px"
+                fontWeight="600"
+                borderTopWidth={1}
+                borderBottomWidth={1}
+                borderStyle={'solid'}
+                borderColor={useColorModeValue('#cecece', 'gray.700')}
+                as={Stack}
+                maxW={'8xl'}
+                py={4}
+                direction={{ base: 'column', md: 'row' }}
+                spacing={4}
+                justify={{ base: 'center', md: 'space-between' }}
+                align={{ base: 'center', md: 'center' }}>
 
-              <Stack direction={'row'} spacing={6}>
-                <Flex direction={['column','row']} mx="0px !important" p="20px" borderRightWidth={1}>
-                  <Box align="center" pr={{base:"0px", sm: "0px", md: "10px", lg: "10px"}}>
-                    <SocialButton label={'Twitter'} href={'#'}>
-                      <FaGithub />
-                    </SocialButton>
-                  </Box>
-                  <Text alignSelf="center">GitHub</Text>
-                </Flex>
-                <Flex direction={['column','row']} mx="0px !important" p="20px" borderRightWidth={1}>
-                  <Box align="center" pr={{base:"0px", sm: "0px", md: "10px", lg: "10px"}}>
-                    <SocialButton label={'YouTube'} href={'#'}>
-                      <FaYoutube />
-                    </SocialButton>
-                  </Box>
-                  <Text alignSelf="center">YouTube</Text>
-                </Flex>
-                <Flex direction={['column','row']} mx="0px !important" p="20px">
-                  <Box align="center" pr={{base:"0px", sm: "0px", md: "10px", lg: "10px"}}>
-                    <SocialButton label={'Instagram'} href={'#'}>
-                      <FaInstagram />
-                    </SocialButton>
-                  </Box>
-                  <Text alignSelf="center">Instagram</Text>
-                </Flex>
-              </Stack>
-            </Container>
-          </Box>
-          
-          
-          <Box>
-            <Container
-            height= '90px'
+                <Stack direction={'row'} spacing={6}>
+                  <Flex direction={['column', 'row']} mx="0px !important" p="20px" borderRightWidth={1}>
+                    <Box align="center" pr={{ base: "0px", sm: "0px", md: "10px", lg: "10px" }}>
+                      <SocialButton label={'Github'} href={'https://github.com/michaelradu'}>
+                        <FaGithub />
+                      </SocialButton>
+                    </Box>
+                    <Text alignSelf="center">GitHub</Text>
+                  </Flex>
+                  <Flex direction={['column', 'row']} mx="0px !important" p="20px" borderRightWidth={1}>
+                    <Box align="center" pr={{ base: "0px", sm: "0px", md: "10px", lg: "10px" }}>
+                      <SocialButton label={'YouTube'} href={'#'}>
+                        <FaYoutube />
+                      </SocialButton>
+                    </Box>
+                    <Text alignSelf="center">YouTube</Text>
+                  </Flex>
+                  <Flex direction={['column', 'row']} mx="0px !important" p="20px">
+                    <Box align="center" pr={{ base: "0px", sm: "0px", md: "10px", lg: "10px" }}>
+                      <SocialButton label={'Instagram'} href={'#'}>
+                        <FaInstagram />
+                      </SocialButton>
+                    </Box>
+                    <Text alignSelf="center">Instagram</Text>
+                  </Flex>
+                </Stack>
+              </Container>
+            </Box>
 
-              fontSize={{ base: '20px', lg: "24px" }}
-              direction={['column', "row"]}
-              as={Stack}
-              maxW={'8xl'}
-              py={4}
-              spacing={4}
-              justifyContent={'center'}
-              align={'center'}>
-              <NextLink href="#">
-                <div className="cursorHover">
-                  <Logo alt="Michael Radu Logo" />
-                </div>
-              </NextLink>
 
-            </Container>
-          </Box>
-          <Box>
-            <Container
-            height= {{base: '120px', sm:'120px',md: '90px',lg:'90px'}}
-              fontSize="16px"
-              fontWeight="600"
-              borderTopWidth={1}
-              borderBottomWidth={1}
-              borderStyle={'solid'}
-              borderColor={useColorModeValue('#cecece', 'gray.700')}
-              as={Stack}
-              maxW={'8xl'}
-              py={4}
-              direction={{ base: 'column', md: 'row' }}
-              spacing={4}
-              justify={{ base: 'center', md: 'space-between' }}
-              align={{ base: 'center', md: 'center' }}>
+            <Box>
+              <Container
+                height='90px'
 
-              <Stack direction={['column','row']} spacing={6}>
-                <Flex mx="0px !important" p="20px" borderRightWidth={1}>
-                  
-                  <Text alignSelf="center"
-                fontSize={{ base: "14px", sm: "14px", md: "16px", lg: "16px" }}
-              >&copy; {new Date().getFullYear()} Michael Radu.</Text>
-                 
-                </Flex>
-                <Flex mx="0px !important" p="20px" borderRightWidth={1}>
-                  <Link alignSelf="center" href={'mailto:miihairadu@gmail.com'}>miihairadu@gmail.com</Link>
-                </Flex>
-                
-              </Stack>
-            </Container>
-          </Box>
-          {/* <Box
-          >
-            <Container
-              fontSize="20px"
-              borderTopWidth={1}
-              borderStyle={'solid'}
-              borderColor={useColorModeValue('#cecece', 'gray.700')}
-              as={Stack}
-              maxW={'8xl'}
-              py={4}
-              direction={{ base: 'column', md: 'row' }}
-              spacing={4}
-              justify={{ base: 'center', md: 'space-between' }}
-              align={{ base: 'center', md: 'center' }}>
-              <Text
-                fontSize={{ base: "14px", sm: "14px", md: "20px", lg: "20px" }}
-              >&copy; {new Date().getFullYear()} Michael Radu. All rights reserved</Text>
-              <Stack direction={'row'} spacing={6}>
-                <SocialButton label={'Twitter'} href={'#'}>
-                  <FaGithub />
-                </SocialButton>
-                <SocialButton label={'YouTube'} href={'#'}>
-                  <FaYoutube />
-                </SocialButton>
-                <SocialButton label={'Instagram'} href={'#'}>
-                  <FaInstagram />
-                </SocialButton>
-              </Stack>
-            </Container>
-          </Box> */}
-        </Stack>
-      </Box>
-    </ScrollAnimation>
+                fontSize={{ base: '20px', lg: "24px" }}
+                direction={['column', "row"]}
+                as={Stack}
+                maxW={'8xl'}
+                py={4}
+                spacing={4}
+                justifyContent={'center'}
+                align={'center'}>
+                <NextLink href="/">
+                  <div className="cursorHover">
+                    <Logo alt="Michael Radu Logo" />
+                  </div>
+                </NextLink>
+
+              </Container>
+            </Box>
+            <Box>
+              <Container
+                height={{ base: '120px', sm: '120px', md: '90px', lg: '90px' }}
+                fontSize="16px"
+                fontWeight="600"
+                borderTopWidth={1}
+                borderBottomWidth={1}
+                borderStyle={'solid'}
+                borderColor={useColorModeValue('#cecece', 'gray.700')}
+                as={Stack}
+                maxW={'8xl'}
+                py={4}
+                direction={{ base: 'column', md: 'row' }}
+                spacing={4}
+                justify={{ base: 'center', md: 'space-between' }}
+                align={{ base: 'center', md: 'center' }}>
+
+                <Stack direction={['column', 'row']} spacing={6}>
+                  <Flex mx="0px !important" p="20px" borderRightWidth={1}>
+
+                    <Text alignSelf="center"
+                      fontSize={{ base: "14px", sm: "14px", md: "16px", lg: "16px" }}
+                    >&copy; {new Date().getFullYear()} Michael Radu.</Text>
+
+                  </Flex>
+                  <Flex mx="0px !important" p="20px" borderRightWidth={1}>
+                    <Link alignSelf="center" href={'mailto:miihairadu@gmail.com'}>miihairadu@gmail.com</Link>
+                  </Flex>
+
+                </Stack>
+              </Container>
+            </Box>
+          </Stack>
+        </Box>
+      </ScrollAnimation>
+    </Box>
   );
 }

@@ -51,16 +51,17 @@ export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <ScrollAnimation offset={850} style={{marginTop: '0 !important', zIndex: '9'}} animateIn="fadeInDown" delay={300} animateOnce={true}>
+    // <Box zIndex="2" bg={useColorModeValue("#ff0047", "#0089ff")}>
+    // <ScrollAnimation animatePreScroll={true} style={{marginTop: '0 !important', zIndex: '9'}} animateIn="fadeInDown" delay={0} animateOnce={true}>
 
-      <Box zIndex="2">
-        <Container maxW='1200px'>
+    <Box bg={useColorModeValue("#ff0047", "#0089ff")} zIndex="2">
+      <Container maxW='1200px'>
         <Flex
           bg="transparent"
           color={useColorModeValue('white', 'white')}
           minH={'60px'}
           pt={{ base: '20px', sm: '20px', md: '50px', lg: '100px' }}
-          pb={{ base: '0px', sm: '0px', md: '40px', lg: '80px' }}
+          pb={{ base: '20px', sm: '20px', md: '40px', lg: '80px' }}
           // px={{ base: 4, sm: 4, md: 4, lg: 300, xl: 500 }}
           // mb={{ base: '75px', sm: '0px', md: '0px', lg: '0px' }}
           mb="0px"
@@ -78,14 +79,14 @@ export default function WithSubnavigation() {
               }
               variant={'ghost'}
               aria-label={'Toggle Navigation'}
-              _hover={{bg: "#000000"}}
-              _active={{bg: "#000"}}
+              _hover={{ bg: "#000000" }}
+              _active={{ bg: "#000" }}
             />
           </Flex>
 
           <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'flex-end' }}>
             <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'flex-start' }}>
-              <NextLink href="#">
+              <NextLink href="/">
                 <div className="cursorHover">
                   <Logo draggable="false" alt="Michael Radu Logo" />
                 </div>
@@ -104,12 +105,13 @@ export default function WithSubnavigation() {
             <DarkModeSwitch />
           </Stack>
         </Flex>
-        </Container>
-        <Collapse in={isOpen} animateOpacity>
-          <MobileNav />
-        </Collapse>
-      </Box>
-    </ScrollAnimation>
+      </Container>
+      <Collapse in={isOpen} animateOpacity>
+        <MobileNav />
+      </Collapse>
+    </Box>
+    // </ScrollAnimation>
+    // </Box>
   );
 }
 

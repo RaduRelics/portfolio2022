@@ -9,10 +9,15 @@ import {
     Container,
     Heading,
     Text,
-    useColorModeValue
+    useColorModeValue,
+    Button,
+    Box,
+    Grid
 } from '@chakra-ui/react'
 import ScrollAnimation from 'react-animate-on-scroll';
+import { ChevronRightIcon } from '@chakra-ui/icons'
 
+import NextLink from 'next/link'
 
 import GlobalDarkMode from '../components/UI/GlobalDarkMode/ColorChange'
 
@@ -56,19 +61,16 @@ export default function Blog({ posts }) {
                 <title>Mihai Radu | Freelance Designer & Developer</title>
             </Head>
             <Navbar />
-            <GlobalDarkMode>
-                <HeroS />
-                <WorkPhilosophy />
-                {/* <Reviews /> */}
-                {/* <YourWebsite /> */}
-                <Projects />
-                <AboutS />
-                <Container
-
-               
-                bg={useColorModeValue("#FFE4DF","#000")}
+            {/* <GlobalDarkMode> */}
+            <HeroS />
+            <WorkPhilosophy />
+            {/* <Reviews /> */}
+            {/* <YourWebsite /> */}
+            <Projects />
+            <AboutS />
+            <Container
                 maxW="100%">
-                <Container  maxW={'8xl'} id="blog" mb={{ base: "100px", sm: "100px", md: "160px", lg: "160px" }}>
+                <Container maxW={'8xl'} id="blog" mb={{ base: "100px", sm: "100px", md: "160px", lg: "160px" }}>
                     <Stack
                         spacing={8}
                         justifyContent="center"
@@ -99,12 +101,25 @@ export default function Blog({ posts }) {
                             </InputRightElement>
                         </InputGroup>
 
-                        {!filteredBlogPosts.length && 'No posts found :('}
-                        {filteredBlogPosts.map((frontMatter) => <BlogPost key={frontMatter.title} {...frontMatter} />)}
+                        <Box display={{ md: 'flex' }}>
+                            <Grid templateColumns={["repeat(1, 1fr)", "repeat(4, 1fr)"]} gap={6}>
+                                {!filteredBlogPosts.length && 'No posts found :('}
+                                {filteredBlogPosts.slice(0, 4).map((frontMatter) => <BlogPost key={frontMatter.title} {...frontMatter} />)}
+                            </Grid>
+                        </Box>
                     </Stack>
+                    <Box align="right" my={16}>
+                        <div className="cursorHover">
+                            <NextLink href="/blog">
+                                <Button rightIcon={<ChevronRightIcon />} fontSize={{ base: '20px', sm: '20px', md: '25px', lg: '25px' }} fontWeight="600" lineHeight="108%" bg="transparent" color={useColorModeValue("#FF2957", "#3d7aed")} _hover={{ color: useColorModeValue("#FF2957", '#366dd5') }}>
+                                    See all posts
+                                </Button>
+                            </NextLink>
+                        </div>
+                    </Box>
                 </Container>
-                </Container>
-            </GlobalDarkMode>
+            </Container>
+            {/* </GlobalDarkMode> */}
             <ContactH />
             <Footer />
         </>

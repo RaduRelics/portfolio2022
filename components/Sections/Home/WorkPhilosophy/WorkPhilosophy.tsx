@@ -36,7 +36,13 @@ export const Line = (props: IconProps) => {
 
 export default function HeroSection() {
   return (
-    <Container py="200px" bg="#000" maxW="100%">
+    <Container
+      py="200px"
+      bg={useColorModeValue("#000", "#1B1B1E")}
+      maxW="100%"
+      borderTop={useColorModeValue('1px solid #424247', '1px solid #424247')}
+      borderBottom={useColorModeValue('1px solid #424247', '1px solid #424247')}
+    >
       <Container color="white" maxW='1200px' px="0 !important">
         <Stack
           textAlign={'center'}
@@ -44,17 +50,17 @@ export default function HeroSection() {
           spacing={{ base: 8, md: 10 }}
         >
           <Stack zIndex="1">
-            <ScrollAnimation animateIn="fadeInUp" delay={500} animateOnce={true}>
-              <Text opacity="0.4" fontSize='11px' fontWeight='500' letterSpacing='1.1px' textAlign="center" mb="24px">MY WORK PHILOSOPHY</Text>
+            <ScrollAnimation animateIn="fadeInUp" delay={200} animateOnce={true}>
+              <Text color={useColorModeValue("#ff5277", "#3d7aed")} fontSize="1.1875rem" fontWeight="700" letterSpacing="1px" mb="1rem">MY WORK PHILOSOPHY</Text>
             </ScrollAnimation>
-            <ScrollAnimation animateIn="fadeInUp" delay={500} animateOnce={true}>
+            <ScrollAnimation animateIn="fadeInUp" delay={400} animateOnce={true}>
 
-              <Heading maxWidth="910px" fontFamily="Bebas Neue" color="#fff" fontSize={{ base: '38px', sm: '38px', md: '64px', lg: '64px' }} lineHeight={{base: "44px",sm: "44px", md: "76px",lg:"76px"}} fontWeight="400">
-              „Simplicity is the soul of efficiency.”
+              <Heading maxWidth="910px" fontFamily="Bebas Neue" color="#fff" fontSize={{ base: '64px', sm: '64px', md: '64px', lg: '64px' }} lineHeight={{ base: "70px", sm: "70px", md: "76px", lg: "76px" }} fontWeight="400">
+                „Simplicity is the soul of efficiency.”
               </Heading>
             </ScrollAnimation>
           </Stack>
-          <Stack mt="30px !important" zIndex="1">
+          <Stack mt="25px !important" zIndex="1">
             <ScrollAnimation animateIn="fadeInUp" delay={500} animateOnce={true}>
 
               <Container justify="center" maxW={'540px'} mx="0">
@@ -64,7 +70,7 @@ export default function HeroSection() {
                   fontSize="15px"
                   lineHeight="28px">
                   I aim to build and ship easy to use and accessible products and
-services for the new generation of workers. 
+                  services for the new generation of workers.
                 </Text>
               </Container>
             </ScrollAnimation>

@@ -51,7 +51,7 @@ export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <ScrollAnimation offset={850} style={{marginTop: '0 !important', zIndex: '9'}} animateIn="fadeInDown" delay={300} animateOnce={true}>
+    // <ScrollAnimation animatePreScroll={true} offset={850} style={{marginTop: '0 !important', zIndex: '9'}} animateIn="fadeInDown" delay={300} animateOnce={true}>
 
       <Box zIndex="2">
         <Container maxW='1200px'>
@@ -109,7 +109,7 @@ export default function WithSubnavigation() {
           <MobileNav />
         </Collapse>
       </Box>
-    </ScrollAnimation>
+    // </ScrollAnimation>
   );
 }
 
